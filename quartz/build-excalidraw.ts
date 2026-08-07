@@ -59,7 +59,7 @@ export async function buildExcalidraw(): Promise<void> {
             window.exportToSvg = async (diagram) => {
                 try {
                   diagram.appState.exportWithDarkMode = true;
-                  
+
                   let svg = await ExcalidrawLib.exportToSvg(diagram);
                   const serializer = new XMLSerializer();
                   return serializer.serializeToString(svg);
@@ -78,7 +78,6 @@ export async function buildExcalidraw(): Promise<void> {
   try {
     // Get directory entries as Dirent objects
     const excalidrawDir = "./content/Excalidraw"
-    const svgDir = "./content/Графы"
     const entries = await fs.promises.readdir(excalidrawDir, { withFileTypes: true });
 
     for (const entry of entries) {
@@ -110,6 +109,11 @@ export async function buildExcalidraw(): Promise<void> {
         }).data
 
         const svgFileName = entry.name.substring(0, entry.name.length - ".excalidraw.md".length) + ".svg"
+        const svgDir = "./content/Графы"
+        if (!fs.existsSync(svgDir) || fs.lstatSync(svgDir).isDirectory()) {
+            fs.mkdirSync(svgDir)
+        }
+        
         const svgFilePath = path.join(svgDir, svgFileName)
         
         fs.writeFileSync(svgFilePath, finalSvg)
