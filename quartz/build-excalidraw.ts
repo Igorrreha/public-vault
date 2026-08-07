@@ -5,7 +5,7 @@ import { optimize } from 'svgo';
 
 const SVG_DIR = "./content/Graphs"
 
-export async function buildExcalidraw(): Promise<Array<String>> {
+export async function buildExcalidraw(): Promise<void> {
   let browser
   try {
     browser = await puppeteer.launch({
@@ -19,7 +19,7 @@ export async function buildExcalidraw(): Promise<Array<String>> {
     })
   } catch (error) {
     console.error('Error launching puppeter:', error)
-    return []
+    return
   }
 
   // Create HTML-page, that connects React, ReactDOM and Excalidraw
@@ -77,7 +77,6 @@ export async function buildExcalidraw(): Promise<Array<String>> {
     { waitUntil: 'load' }
   );
 
-  let processedFiles: Array<String> = []
   try {
     const excalidrawDir = "./content/Excalidraw"
     const entries = await fs.promises.readdir(excalidrawDir, { withFileTypes: true });
@@ -111,7 +110,7 @@ export async function buildExcalidraw(): Promise<Array<String>> {
         }).data
 
         const svgFileName = entry.name.substring(0, entry.name.length - ".excalidraw.md".length) + ".svg"
-        if (!fs.existsSync(SVG_DIR) || fs.lstatSync(SVG_DIR).isDirectory()) {
+        if (!fs.existsSync(SVG_DIR)) {
             fs.mkdirSync(SVG_DIR)
         }
         
@@ -119,8 +118,6 @@ export async function buildExcalidraw(): Promise<Array<String>> {
         
         fs.writeFileSync(svgFilePath, finalSvg)
         console.log(`File updated: ${svgFilePath}`)
-
-        processedFiles.push(svgFilePath)
       }
     }
   } catch (error) {
@@ -128,7 +125,6 @@ export async function buildExcalidraw(): Promise<Array<String>> {
   }
 
   await browser.close()
-  return processedFiles
 }
 
 async function extractJsonFromObsidianExcalidraw(filePath: string): Promise<any> {
@@ -162,15 +158,17 @@ async function extractJsonFromObsidianExcalidraw(filePath: string): Promise<any>
   }
 }
 
-export async function cleanup(processedFiles: Array<String>) {
+export async function cleanup() {
     const entries = await fs.promises.readdir(SVG_DIR, { withFileTypes: true });
 
     for (const entry of entries) {
       if (entry.isFile()) {
         const fullPath = path.join(SVG_DIR, entry.name);
-        if (!processedFiles.includes(fullPath)) {
-            fs.rmSync(fullPath)
-        }
+        fs.rmSync(fullPath)
       }
+    }
+
+    if (fs.existsSync(SVG_DIR)) {
+        fs.rmdirSync(SVG_DIR)
     }
 }

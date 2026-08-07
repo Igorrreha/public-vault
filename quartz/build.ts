@@ -363,9 +363,9 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
 
 export default async (argv: Argv, mut: Mutex, clientRefresh: () => void) => {
   try {
-    const processedFiles = await buildExcalidraw()
+    await buildExcalidraw()
     const buildingResult = await buildQuartz(argv, mut, clientRefresh)
-    await cleanup(processedFiles)
+    await cleanup()
     return buildingResult
   } catch (err) {
     trace("\nExiting Quartz due to a fatal error", err as Error)
