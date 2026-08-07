@@ -22,6 +22,7 @@ import { getStaticResourcesFromPlugins } from "./plugins"
 import { randomIdNonSecure } from "./util/random"
 import { ChangeEvent } from "./plugins/types"
 import { minimatch } from "minimatch"
+import { buildExcalidraw, cleanup } from "./build-excalidraw"
 
 function reportSlugCollisions(content: ProcessedContent[]): void {
   const collisions = detectSlugCollisions(content)
@@ -362,7 +363,10 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
 
 export default async (argv: Argv, mut: Mutex, clientRefresh: () => void) => {
   try {
-    return await buildQuartz(argv, mut, clientRefresh)
+    await buildExcalidraw()
+    const buildingResult = await buildQuartz(argv, mut, clientRefresh)
+    await cleanup()
+    return buildingResult
   } catch (err) {
     trace("\nExiting Quartz due to a fatal error", err as Error)
   }

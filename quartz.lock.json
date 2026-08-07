@@ -1,11 +1,4 @@
 {
   "version": "1.0.0",
-  "plugins": {
-    "excalidraw-svg-adaptor.ts": {
-      "resolved": "./.quartz/plugins/excalidraw-svg-adaptor.ts",
-      "source": "C:\\Users\\igor\\Obsidian\\public-vault\\.quartz\\plugins\\excalidraw-svg-adaptor.ts",
-      "comremit": "local",
-      "installedAt": "2026-08-02T13:37:51.059Z"
-    }
-  }
+  "plugins": {}
 }

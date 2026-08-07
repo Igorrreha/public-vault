@@ -48,6 +48,8 @@ async function getExternalPluginSources(): Promise<PluginSource[]> {
 async function main() {
   const externalPlugins = await getExternalPluginSources()
 
+  console.log(externalPlugins)
+
   if (externalPlugins.length === 0) {
     console.log("No external plugins to install.")
     return

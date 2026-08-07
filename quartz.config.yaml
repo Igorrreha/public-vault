@@ -11,6 +11,7 @@ configuration:
   ignorePatterns:
     - private
     - templates
+    - Excalidraw
     - .obsidian
   theme:
     fontOrigin: googleFonts
@@ -263,13 +264,6 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: "@quartz-community/obsidian-plugin-excalidraw"
-    enabled: true
-    options:
-      enableInteraction: true
-      darkMode: auto
-      exportPadding: 20
-    order: 50
 layout:
   groups:
     toolbar:

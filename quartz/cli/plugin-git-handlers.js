@@ -65,7 +65,7 @@ async function buildPluginAsync(pluginDir, name) {
     linkPeerPlugins(pluginDir)
     return true
   } catch (error) {
-    console.log(styleText("red", `  ✗ ${name}: build failed`))
+    console.log(styleText("red", `  ✗ ${name}: build failed: ${error}`))
     return false
   }
 }
@@ -573,8 +573,12 @@ export async function handlePluginInstallUnified({
     const remoteEntries = []
     for (const entry of missing) {
       try {
+        console.log(entry.source)
+
         const { name, url, ref, local, subdir } = parseGitSource(entry.source)
         const pluginDir = path.join(PLUGINS_DIR, name)
+
+        console.log(`handle stuff. is_local: ${local} dir: ${pluginDir}`)
 
         if (fs.existsSync(pluginDir)) {
           if (local) {
@@ -697,6 +701,7 @@ export async function handlePluginInstallUnified({
       console.log(styleText("cyan", "→ Building plugins..."))
       const concurrency = resolvedConcurrency
       const results = await runParallel(installed, concurrency, async ({ name, pluginDir }) => {
+        console.log(`before plugin build ${name} ${pluginDir}`)
         const ok = await buildPluginAsync(pluginDir, name)
         if (ok) console.log(styleText("green", `  ✓ ${name} built`))
         return ok
@@ -704,6 +709,7 @@ export async function handlePluginInstallUnified({
       for (const ok of results) {
         if (!ok) failed++
       }
+      console.log("regenerate plugin idx")
       await regeneratePluginIndex()
     }
 
@@ -1187,6 +1193,7 @@ export async function handlePluginAdd(
 
   // Handle local plugins and collect remote sources to clone
   const remoteSources = []
+  console.log(`plugin sources: ${sources}`)
   for (const source of sources) {
     try {
       const parsed = parseGitSource(source)

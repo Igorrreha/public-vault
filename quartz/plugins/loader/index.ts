@@ -134,6 +134,8 @@ async function resolveSinglePlugin(
   let manifest: Partial<PluginManifest> = {}
   let pluginSource = "npm"
 
+  console.log(`plugin specifier: ${specifier}`);
+
   if (typeof specifier === "string") {
     packageName = specifier
     // Check if it's a Git-based source
@@ -449,6 +451,7 @@ export async function resolvePlugins(
   }
 
   for (const specifier of specifiers) {
+    console.log("!!!asdasd");
     const { plugin, error } = await resolveSinglePlugin(specifier, options)
 
     if (plugin) {
