@@ -4,7 +4,7 @@ function replaceExcalidrawLinks(text: string): string {
   const regex = /!\[\[([\s\S]*?)\.excalidraw\]\]/g;
 
   return text.replace(regex, (_match, innerContent) => {
-    const newLink = `<div style="overflow: auto;"><img style="max-width: 100%; height: auto;" src="Графы/${innerContent}.svg"></div>`;
+    const newLink = `<div style="overflow: auto;"><img style="max-width: 100%; height: auto;" src="Graphs/${innerContent}.svg"></div>`;
     return newLink;
   });
 }

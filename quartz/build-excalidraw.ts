@@ -1,9 +1,11 @@
 import * as fs from "fs"
 import puppeteer from 'puppeteer'
 import path from "path"
-import { optimize, Config } from 'svgo';
+import { optimize } from 'svgo';
 
-export async function buildExcalidraw(): Promise<void> {
+const SVG_DIR = "./content/Graphs"
+
+export async function buildExcalidraw(): Promise<Array<String>> {
   let browser
   try {
     browser = await puppeteer.launch({
@@ -17,7 +19,7 @@ export async function buildExcalidraw(): Promise<void> {
     })
   } catch (error) {
     console.error('Error launching puppeter:', error)
-    return
+    return []
   }
 
   // Create HTML-page, that connects React, ReactDOM and Excalidraw
@@ -75,8 +77,8 @@ export async function buildExcalidraw(): Promise<void> {
     { waitUntil: 'load' }
   );
 
+  let processedFiles: Array<String> = []
   try {
-    // Get directory entries as Dirent objects
     const excalidrawDir = "./content/Excalidraw"
     const entries = await fs.promises.readdir(excalidrawDir, { withFileTypes: true });
 
@@ -109,15 +111,16 @@ export async function buildExcalidraw(): Promise<void> {
         }).data
 
         const svgFileName = entry.name.substring(0, entry.name.length - ".excalidraw.md".length) + ".svg"
-        const svgDir = "./content/Графы"
-        if (!fs.existsSync(svgDir) || fs.lstatSync(svgDir).isDirectory()) {
-            fs.mkdirSync(svgDir)
+        if (!fs.existsSync(SVG_DIR) || fs.lstatSync(SVG_DIR).isDirectory()) {
+            fs.mkdirSync(SVG_DIR)
         }
         
-        const svgFilePath = path.join(svgDir, svgFileName)
+        const svgFilePath = path.join(SVG_DIR, svgFileName)
         
         fs.writeFileSync(svgFilePath, finalSvg)
-        console.log(`File created: ${svgFilePath}`)
+        console.log(`File updated: ${svgFilePath}`)
+
+        processedFiles.push(svgFilePath)
       }
     }
   } catch (error) {
@@ -125,6 +128,7 @@ export async function buildExcalidraw(): Promise<void> {
   }
 
   await browser.close()
+  return processedFiles
 }
 
 async function extractJsonFromObsidianExcalidraw(filePath: string): Promise<any> {
@@ -158,14 +162,15 @@ async function extractJsonFromObsidianExcalidraw(filePath: string): Promise<any>
   }
 }
 
-export async function cleanup() {
-    const svgDir = "./content/Графы"
-    const entries = await fs.promises.readdir(svgDir, { withFileTypes: true });
+export async function cleanup(processedFiles: Array<String>) {
+    const entries = await fs.promises.readdir(SVG_DIR, { withFileTypes: true });
 
     for (const entry of entries) {
       if (entry.isFile()) {
-        const fullPath = path.join(svgDir, entry.name);
-        fs.rmSync(fullPath)
+        const fullPath = path.join(SVG_DIR, entry.name);
+        if (!processedFiles.includes(fullPath)) {
+            fs.rmSync(fullPath)
+        }
       }
     }
 }
