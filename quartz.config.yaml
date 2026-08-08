@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Публичный Игорёшка
+  pageTitle: Igoreshka's Lib
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true

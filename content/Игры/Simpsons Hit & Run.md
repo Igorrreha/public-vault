@@ -1,8 +1,45 @@
+---
+comletion_date: 2026-08-02T19:29:00
+---
 #is_completed #game #is_reviewed 
-Итак, я **распаковал** для себя платформу [[Nintendo GameCube|GameCube]], пройдя на ней Simpsons [Hit & Run](https://www.gog.com/dreamlist/game/the-simpsons-hit-run), и закрыв тем самым свой детский [[Гештальт|гештальт]].
+Первая игра, которую я прошёл на [[Nintendo GameCube|GameCube]] (закрыв тем самым свой детский [[Гештальт|гештальт]]).
 ![image|312](https://images.gog.com/a73f637b37d14c82f9e2c6d7713ecf0d32c4ab9e9a102ed49a882fdd4c3bce73_glx_vertical_cover.webp?namespace=gamesdb)
 ## Разбор игры 2003 года о котором никто не просил
 Технически игра достаточно примитивна и представляет из себя что-то вроде упрощённого клона GTA ViceCity но с некоторыми нюансами:
-### 1. Структура контента
-<div style="overflow: auto;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 618.3999938964844 286.40000915527344" width="618.3999938964844" height="286.40000915527344"><!-- svg-source:excalidraw --><metadata></metadata><defs><style class="style-fonts">@font-face { font-family: Excalifont; src: url(data:font/woff2;base64,d09GMgABAAAAAAHwAA0AAAAABBAAAAGhAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGx4cNAZgADQRCAoALAsGAAE2AiQDCAQgBYMYByAbUwPIrgpscEcPjAqbbfFGeKx5Kz5EU3R4bDzUL93bvX8JXUVSmorE9SJxvRjNeBQOYXEOHSway/n/P+buVKO/qf2JJVWsT8RCwUokBQ4hUxIh0zx2kOoSixA6//37cw+I33LHb5EcSZbiLwn1l1CELdAXC7/Ia2HUcht7no7PES0JadRRYMAoA87WTvMJYgUaIDBgDsM3u00398MKuofDeAnda/+0gQ7Y6yWfIrW+/EzgUNU4x/xDBFjZOqq08QNClf+f6uoSTsInxFsCk8RIVOjgCel8k6AoApMN3NH0cADRkCBBwaAYFwg+3u9CxZ9YxvsDevfuFsDP16+mlcs86JMgeJ5qrXFd4uBUWQ2UIgTSN4QgEQJrAGg7xhNFAl79NkLHN9KIL1S6XlHMGqC2wm7dMgu23Qz1rcxNbG2cBDwYmzpb6Tt4MXZwNLe1QSKCwvXjrIqVu52ZIxIVxBC3KIZJ8px7SJ61Fz2qaMtGEnnLBb26c3cwNzVzQtyGPAgTxsSQgTtKV44c9F0FkZyVFcrjcfBYND7qYmwkiAc0qxEAAA==); }@font-face { font-family: Excalifont; src: url(data:font/woff2;base64,d09GMgABAAAAAAYYAA4AAAAAClwAAAXFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbgUAcNAZgAFQRCAqKPId5CxIAATYCJAMgBCAFgxgHIBsWCKOiflFOfLK/SOAN5W9kQAgTpXXBRDEBZaCj4nhAZU/Fvw4mFtZl8HjZzwu0VkplKyrtIVX2PgyG58Pb278dU4HNkyAo4RBz7U+3r6SF2Q5bUenOrEXqrbqlTdqXEAhfNGcmAeYagOCrfgHs/8/l9P7R3M+3YFHCCa7t9w4ovHAswKyE4nAOCmyLBTQArYTTTb2qT4/0CqWIh1CRIXs3BwjADMhQ4iRYBA/kXICkUC1mb+0eRvDcS9cQvHR1J4LPwq51BDEA/B41t6qvQwCjY1BOQkBp/yhgxTAGD8aNxqNGbtwN9DC+dUlN1Xk0rluGIrA5WlEmZj0APt5dVijhooBk/9jZmGFyoibk6IwD6OJwckDxN0RQFjavtl48yPhronf/n+g5luwuAxcAkLfGlwk3QFfcaIQ8o/40MwGFmf6SK6myJsPAIA3P+dUPP//pjyLgIr8hCEHevqvJB1UAxciQIVHIt9r6stxFJeXyXTjkV3E8LKdwHGrfr3liBgyC8XQcDtVDec2kV+zWZBBUkRzKhjsmZb0agtwS3igqpCPgicuH3TVeOXHpxp14iDvljg/W452vw3y4OldFySPl0l5vnlYRqz4sshRsAKtPZsh9wyDWDBjChgKxYhTBAuAnRu3qVBW5yv5QTLb06a5BLs4J1CrOPbg0r86pQfR8Z0bv6bCMeiZjPUpN9WpYXpwjjy8veFFNG2Qoi/rlfIIxv+pm12zqsyZCKqpmH4zkfhH8WGWpB/cd/tb5Gw6Q++ShU568GTXeHXtV7aonVxbT1BMW6XKn7vCH1v3fK0d5aqcXesV8xK6go4P7wWsXYlkNxzIb6hvk8Qzvc/zTuHz5W6AemL1PHwYZEwgsXs51H1oCiQmmbfH8P3FuYnwrktX4a22QpadhFneq4YZJ7SseLDSD9MVsoq7JW66shhOZJK4y6eKV4z4IBNrK9QYACE/MFIYo/zhh5w3N7e2xn94yPqsOT57k+/agL9xZyeH/rxRvc4bMve4D/ObGnlOjpJ777bJbR7da45W7310kXmw9XM7cRXWqRbTrCY0Z87uyZnBToCmukl7WxTyVb50u7G+295H9t6LGwSkeW3Xk78WsM4Z803w9qx5GX7hpZzeldvJRJ5PDtSbFBHKWffOiTfNlZhdb/0k9+zU/hhcFSTz7Ytp/QPI99scwHz6aurKjdqDb//PSg1sDdenMwATt9cS195+yXrHYfYjroCfeadLTkt0fH97vHehjGrOaUya/3oNN/NYgRaihT+PHb3nczyirF+G6LY/c5Qr/kyp2vE6133GJbT/KZir858Vaajdzg4kc21h8xtYbR59+9webHc6BUnvnd+oxaz2PLe599amHpGPa8mBw4Ocl+zt/c63rJxzsncv4sv6JpJWX6tKeeJB++beKl0/76qSfMovvoRqrLv1F+aeH3LyT1Yt5/54zeMWSnKpyfZyHzGSzLVxRp9f6o54U2v2aXB8jfn0EU39x6LGRYz5pza+k2vUbu0T7wkFNf0gOxgK5z/BeeD8hn5aWZJ6tOP7ampNffrO1Iimw9FpoSmtYkNp9B2Y6/jiwjcv5kZ635ra9uPdZH74x9m9F3yrTXH3c0L7+cHLP3rVbxd9TlWmb/htrr1PKKsXalKDUDAAAAiCQvcyPzlZ9waS/BOCjvbKbAeDji7/Zxzj0/336ugqAgAIABL6pcjsD7L9/+yDwGKEW0RINjTUBkoBQHErHn+TxFTFOCgIQvAEOAFAA4v16wEbeJBqZIgDNyzgG4Xa/QbG60aBlO9xgpFo0WLVSH8FJBbTY05IFmu1WbFi3S55BqlW70SzQjVLpErZHQVmRfIXruCptNHvZtE2CLC6fwkymgjK4TFZ5CLm9bPRmQ9r0qkq1S/cw08Rxm/ai227VtofenWlJFpmikKKYbNFe5Owrl+kW7CGfrIFGI+dzCZNRCWpmdwksy0dDNON/sAAA); }</style></defs><rect x="0" y="0" width="618.3999938964844" height="286.40000915527344" fill="#121212"></rect><g stroke-linecap="round" transform="translate(10 10) rotate(0 60.40000915527344 54.00000762939453)"><path d="M27 0 C50.5 -1.15, 69.29 0.4, 93.8 0 M27 0 C48.54 0.43, 72.56 -0.01, 93.8 0 M93.8 0 C112.56 0.89, 122.32 9.98, 120.8 27 M93.8 0 C112.45 -1.57, 120.68 8.77, 120.8 27 M120.8 27 C119.2 43.59, 120.74 58.42, 120.8 81 M120.8 27 C121.14 38.51, 121.37 49.75, 120.8 81 M120.8 81 C118.95 97.42, 111.15 109.95, 93.8 108 M120.8 81 C122.15 98.19, 112.36 108.26, 93.8 108 M93.8 108 C69.4 107.39, 44.7 109.48, 27 108 M93.8 108 C72.58 107.26, 52.27 107.1, 27 108 M27 108 C10.83 107.77, 1.35 97.57, 0 81 M27 108 C7.16 107.01, -0.34 100.14, 0 81 M0 81 C0.91 68, 2.12 55.42, 0 27 M0 81 C0.39 64.72, -0.4 49.36, 0 27 M0 27 C1.12 10.8, 8.14 0.87, 27 0 M0 27 C2.05 9.75, 7.55 -1.91, 27 0" stroke="#d3d3d3" stroke-width="2" fill="none"></path></g><g transform="translate(23.056259155273438 51.50000762939453) rotate(0 47.34375 12.5)"><text x="47.34375" y="17.619999999999997" font-family="Excalifont, Xiaolai, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">Тут текст</text></g><g stroke-linecap="round" transform="translate(360.3999938964844 149.1999969482422) rotate(0 124 63.600006103515625)"><path d="M31.8 0 C83.48 2.53, 138.34 1.75, 216.2 0 M31.8 0 C69.85 -1.3, 108.03 -1.17, 216.2 0 M216.2 0 C235.55 -1.58, 247.35 12.55, 248 31.8 M216.2 0 C238.75 -0.81, 248.56 10.86, 248 31.8 M248 31.8 C249.48 54.65, 250.03 80.78, 248 95.4 M248 31.8 C247.63 50.85, 247.61 70.02, 248 95.4 M248 95.4 C249.83 116.37, 238.75 125.77, 216.2 127.2 M248 95.4 C246.16 115.61, 237.06 128.34, 216.2 127.2 M216.2 127.2 C173.99 125.65, 132.36 125.62, 31.8 127.2 M216.2 127.2 C160.45 128.85, 103.97 129.79, 31.8 127.2 M31.8 127.2 C11.72 129, -0.86 117.47, 0 95.4 M31.8 127.2 C12.65 127.95, -1.45 114.69, 0 95.4 M0 95.4 C1.33 79.11, -1.42 60.71, 0 31.8 M0 95.4 C-0.59 81.78, -0.99 66.54, 0 31.8 M0 31.8 C-0.96 8.77, 11.14 -1.92, 31.8 0 M0 31.8 C1.91 12.86, 8.45 -1.56, 31.8 0" stroke="#d3d3d3" stroke-width="2" fill="none"></path></g><g transform="translate(429.8479118347168 200.3000030517578) rotate(0 54.55208206176758 12.5)"><text x="54.55208206176758" y="17.619999999999997" font-family="Excalifont, Xiaolai, sans-serif, Segoe UI Emoji" font-size="20px" fill="#d3d3d3" text-anchor="middle" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">И тут текст</text></g></svg></div>
-![[test_drawing.excalidraw]]
+### Структура
+![[simpsons_hit_and_run.excalidraw]]
+
+### Анализ структуры
+#### На первый взгляд игра до безобразия примитивна
+Из базовых механик в ней есть только:
+1. Перемещение
+	1. Бег + прыжок
+	2. Управление авто
+2. Интеракция (отдельная кнопка для взаимодействия)
+	1. С персонажами
+	2. С авто
+	3. С дверями "посещабельных" построек
+3. Удар (забегая вперёд, самая бесполезная)
+#### Две первых миссии игра прям тащит игрока за ручку явно пихая эти механики под нос.
+Начинается всё с того что она:
+1. Спавнит игрового персонажа прям рядом с Мардж (интерактивным NPC, запускающим первый квест)
+2. Отбирает управление на старте (буквально на секунду), проигрывая анимацию, которая показывает как она нервно ходит туда-сюда со здоровенным восклицательным знаком над головой
+3. После анимации сразу же показывает голову мардж в анимированной UI иконке вместе с плашкой на пол экрана гласящей "Поговори с Мардж", после чего точка отправляется вечно висеть на экране сверху (область иконки занимает 1/8 часть ширины экрана)
+4. Одновременно с этим на карте мигает здоровенная синяя точка — интерактивная Мардж
+
+> [!important] Эта последовательность воспроизводится при каждой загрузке игры
+
+*Технически игрок может уже тут идти и заниматься чем угодно кроме продвижения по сюжету, но намёков на то что именно нужно делать более чем достаточно.*
+
+Всё как по методичке онбординга:
+1. Показал понятную цель — поговорить с Мардж
+2. Дал все вводные для того чтобы её выполнить (показал где Мардж, при приближении подсветил анимированную подсказку с кнопкой для интеракции)
+3. Вознаградил за действие кат-сценой с рофельным диалогом выполняющим сразу 2 задачи:
+	1. Дать игроку то, зачем он пришёл — контент по Симпсонам (тем самым вознаградив)
+	2. Создать [[Крючок|крючок]] (в диалоге упоминается знаковый персонаж — Лиза Симпсон и знаковое место — школа, цель задачи принести Лизе в школу забытый ею дома научный проект)
+4. Явно поставил перед игроком следующую задачу, закольцевав тем самым [[Петля обратной связи|петлю обратной связи]], начав новый её виток
+
+Дальше там обучение игрока на примере решению всех сюжетно важных игровых задач буквально в рамках первой сюжетной миссии, аккуратные, почти невидимые манипулятивные склонения игрока к эксплорингу, ещё больше слоёв петель обратной связи, но об этом подробнее в другой раз (задолбался собирать всё это полотнище ;D параллельно перетаскивая сюда куски гига-графа с ГД инфой которую хочется вставлять инлайн для большей понятности)
+
+В общем, продолжение следует...
+Stay tuned, как говорится.

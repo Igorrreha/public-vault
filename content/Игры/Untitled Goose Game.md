@@ -6,6 +6,6 @@ game_tags:
   - multiplayer
   - flat_style
 ---
-#game #is_completed #is_reviewed
+#game #is_completed
 ## Ты гусь!
 ![[Pasted image 20260730033832.png]]
