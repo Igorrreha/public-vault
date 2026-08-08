@@ -168,6 +168,25 @@ plugins:
     layout:
       position: right
       priority: 10
+    options:
+      localGraph:
+        drag: true
+        zoom: true
+        depth: -1
+        repelForce: 0.2
+        centerForce: 0
+        linkDistance: 40
+        opacityScale: 2
+        enableRadial: false
+      globalGraph:
+        drag: false
+        zoom: false
+        depth: -1
+        repelForce: 0.2
+        centerForce: 0
+        linkDistance: 40
+        opacityScale: 2
+        enableRadial: false
   - source: "@quartz-community/search"
     enabled: true
     layout:
