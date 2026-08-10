@@ -893,7 +893,7 @@ Igoreshka's Lib ^TDFQHmey
 			"width": 145.61985778808594,
 			"height": 25,
 			"angle": 0,
-			"strokeColor": "#6741d9",
+			"strokeColor": "#4d94f7",
 			"backgroundColor": "transparent",
 			"fillStyle": "solid",
 			"strokeWidth": 2,
@@ -905,11 +905,11 @@ Igoreshka's Lib ^TDFQHmey
 			"index": "ad",
 			"roundness": null,
 			"seed": 2033628673,
-			"version": 502,
-			"versionNonce": 1258430255,
+			"version": 503,
+			"versionNonce": 854394915,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1786190876465,
+			"updated": 1786370499108,
 			"locked": false,
 			"text": "Igoreshka's Lib",
 			"rawText": "Igoreshka's Lib",
@@ -1273,56 +1273,12 @@ Igoreshka's Lib ^TDFQHmey
 			"lineHeight": 1.25,
 			"hasTextLink": false,
 			"link": null
-		},
-		{
-			"id": "q9zlxg18FCdaQCPSXHYa2",
-			"type": "freedraw",
-			"x": -80.39377702557368,
-			"y": -540.1772181007559,
-			"width": 0.0001,
-			"height": 0.0001,
-			"angle": 0,
-			"strokeColor": "#1e1e1e",
-			"backgroundColor": "transparent",
-			"fillStyle": "solid",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"groupIds": [],
-			"frameId": null,
-			"index": "ar",
-			"roundness": null,
-			"seed": 932879809,
-			"version": 4,
-			"versionNonce": 306280751,
-			"isDeleted": true,
-			"boundElements": null,
-			"updated": 1786191172356,
-			"link": null,
-			"locked": false,
-			"points": [
-				[
-					0,
-					0
-				],
-				[
-					0.0001,
-					0.0001
-				]
-			],
-			"pressures": [],
-			"simulatePressure": true,
-			"strokeOptions": {
-				"variability": "constant",
-				"streamline": 0.5
-			}
 		}
 	],
 	"appState": {
 		"theme": "dark",
 		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#1e1e1e",
+		"currentItemStrokeColor": "#4d94f7",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "solid",
 		"currentItemStrokeWidthKey": "medium",
@@ -1337,10 +1293,10 @@ Igoreshka's Lib ^TDFQHmey
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
 		"currentItemFrameRole": null,
-		"scrollX": 359.09418024793655,
-		"scrollY": 881.3811609713674,
+		"scrollX": 226.9861625888951,
+		"scrollY": 797.1499386625201,
 		"zoom": {
-			"value": 1.362406
+			"value": 2
 		},
 		"currentItemRoundness": "round",
 		"gridSize": 20,

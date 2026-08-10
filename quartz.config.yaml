@@ -32,6 +32,8 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
+        accentColor: "#ffffff"
+        colorAccent: "#ffffff"
         light: "#161618"
         lightgray: "#393639"
         gray: "#646464"
@@ -114,7 +116,11 @@ plugins:
   - source: "@quartz-themes/core"
     enabled: true
     options:
-      theme: default
+      theme: things-3
+      colors:
+        darkMode:
+          accentColor: "#ffffff"
+          colorAccent: "#ffffff"
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
@@ -179,8 +185,8 @@ plugins:
         opacityScale: 2
         enableRadial: false
       globalGraph:
-        drag: false
-        zoom: false
+        drag: true
+        zoom: true
         depth: -1
         repelForce: 0.2
         centerForce: 0
