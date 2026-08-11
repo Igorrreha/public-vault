@@ -53,39 +53,45 @@ function setupBackButton(tg: any) {
 }
 
 function setupGlobalLinkInterceptor(tg: any) {
-  if ((window as any).__linkInterceptorInstalled) return
-  (window as any).__linkInterceptorInstalled = true
+    if ((window as any).__linkInterceptorInstalled) return
+    (window as any).__linkInterceptorInstalled = true
 
-  document.addEventListener(
-    "click",
-    (e: MouseEvent) => {
-      const target = e.target as HTMLElement
-      const anchor = target.closest("a") as HTMLAnchorElement | null
+    document.addEventListener(
+        "click",
+        (e: MouseEvent) => {
+            const target = e.target as HTMLElement
+            const anchor = target.closest("a") as HTMLAnchorElement | null
 
-      if (!anchor) return
+            if (!anchor) return
 
-      const href = anchor.getAttribute("href") || ""
+            const href = anchor.getAttribute("href") || ""
+            
+            const isExternal = anchor.host && anchor.host !== window.location.host
+            const isStaticFile = FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)
+            if (!isStaticFile && !isExternal) {
+                return
+            }
 
-      // check if link targets SVG or other file
-      if (FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)) {
-        // stop default browser & Quartz logic
-        e.preventDefault()
-        e.stopPropagation()
-        e.stopImmediatePropagation()
+            // check if link targets SVG or other file
+            if (FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)) {
+                // stop default browser & Quartz logic
+                e.preventDefault()
+                e.stopPropagation()
+                e.stopImmediatePropagation()
 
-        // get absolute URL
-        const fullUrl = anchor.href
+                // get absolute URL
+                const fullUrl = anchor.href
 
-        // open file via Telegram Modal / External Browser
-        if (tg.openLink) {
-          tg.openLink(fullUrl)
-        } else {
-          window.open(fullUrl, "_blank")
-        }
-      }
-    },
-    true
-  )
+                // open file via Telegram Modal / External Browser
+                if (tg.openLink) {
+                    tg.openLink(fullUrl)
+                } else {
+                    window.open(fullUrl, "_blank")
+                }
+            }
+        },
+        true
+    )
 }
 
 // function handleExternalLinks(tg: any) {
