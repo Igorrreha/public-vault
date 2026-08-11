@@ -42,11 +42,7 @@ function setupBackButton(tg: any, e: CustomEvent) {
     }
 
     currentBackHandler = () => {
-        if (window.history.length > 1) {
-            window.history.back()
-        } else {
-            window.location.href = "/"
-        }
+        window.history.back()
     }
 
     tg.BackButton.onClick(currentBackHandler)
