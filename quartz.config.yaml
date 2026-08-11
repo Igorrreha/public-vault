@@ -32,8 +32,6 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        accentColor: "#ffffff"
-        colorAccent: "#ffffff"
         light: "#161618"
         lightgray: "#393639"
         gray: "#646464"
@@ -117,10 +115,6 @@ plugins:
     enabled: true
     options:
       theme: things-3
-      colors:
-        darkMode:
-          accentColor: "#ffffff"
-          colorAccent: "#ffffff"
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
