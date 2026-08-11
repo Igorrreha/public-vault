@@ -1,4 +1,16 @@
 //@ts-nocheck
+const FILE_EXTENSIONS = /\.(svg|png|jpg|jpeg|gif|webp|pdf|zip|mp4|mp3)($|\?)/i
+
+let currentBackHandler: (() => void) | null = null
+
+document.addEventListener("nav", (e: CustomEvent) => {
+    onTelegramReady((tg) => {
+        console.log("Telegram WebApp Inited")
+        setupBackButton(tg, e)
+        setupGlobalLinkInterceptor(tg)
+    })
+})
+
 function onTelegramReady(callback: (tg: any) => void, maxRetries = 50) {
     let retries = 0
   
@@ -15,19 +27,7 @@ function onTelegramReady(callback: (tg: any) => void, maxRetries = 50) {
     }, 100)
 }
 
-let currentBackHandler: (() => void) | null = null
-
-document.addEventListener("nav", (e: CustomEvent) => {
-    onTelegramReady((tg) => {
-        console.log("Telegram WebApp Inited")
-        setupBackButton(tg)
-        setupGlobalLinkInterceptor(tg)
-        //handleExternalLinks(tg)
-    })
-})
-
-
-function setupBackButton(tg: any) {
+function setupBackButton(tg: any, e: CustomEvent) {
     const currentSlug = e.detail.slug
 
     if (currentSlug === "index" || currentSlug === "") {
@@ -65,7 +65,7 @@ function setupGlobalLinkInterceptor(tg: any) {
             if (!anchor) return
 
             const href = anchor.getAttribute("href") || ""
-            
+
             const isExternal = anchor.host && anchor.host !== window.location.host
             const isStaticFile = FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)
             if (!isStaticFile && !isExternal) {
@@ -93,15 +93,3 @@ function setupGlobalLinkInterceptor(tg: any) {
         true
     )
 }
-
-// function handleExternalLinks(tg: any) {
-//     document.querySelectorAll('a[href^="http"]').forEach((anchor) => {
-//         const link = anchor as HTMLAnchorElement
-//         if (link.host !== window.location.host) {
-//             link.addEventListener("click", (e) => {
-//                 e.preventDefault()
-//                 tg.openLink(link.href)
-//             })
-//         }
-//     })
-// }
