@@ -1,19 +1,29 @@
 //@ts-nocheck
-document.addEventListener("nav", (e: CustomEvent) => {
-    updateTgBackButton(e)
-})
+function onTelegramReady(callback: (tg: any) => void, maxRetries = 50) {
+  let retries = 0
 
-function updateTgBackButton(e: CustomEvent): void {
-    try {
-        const tg = window.Telegram.WebApp
-
-        if (e.detail.url == "index") {
-            tg.BackButton.hide()
-        } else {
-            tg.BackButton.show()
-        }
+  const interval = setInterval(() => {
+    if (window.Telegram?.WebApp) {
+      clearInterval(interval)
+      window.Telegram.WebApp.ready() 
+      callback(window.Telegram.WebApp)
+    
+    } else if (retries >= maxRetries) {
+      clearInterval(interval)
+      console.warn("Telegram WebApp SDK awaiting timeout")
     }
-    catch(e) {
-        console.log("No Telegram Connection")
-    }
+    retries++
+  }, 100)
 }
+
+document.addEventListener("nav", () => {
+    onTelegramReady((tg) => {
+        console.log("Telegram WebApp Inited")
+
+        tg.BackButton.show()
+
+        tg.BackButton.onClick(() => {
+            window.history.back()
+        })
+    })
+})
