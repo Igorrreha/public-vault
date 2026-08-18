@@ -150,7 +150,7 @@ plugins:
     enabled: true
   - source: "@quartz-community/cname"
     enabled: true
-  - source: "@quartz-community/canvas-page"
+  - source: "github:Igorrreha/quartz-canvas-page-improved"
     enabled: true
   - source: "@quartz-community/content-page"
     enabled: true
