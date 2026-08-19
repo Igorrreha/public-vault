@@ -64,12 +64,18 @@ function setupGlobalLinkInterceptor(tg: any) {
 
             const isExternal = anchor.host && anchor.host !== window.location.host
             const isStaticFile = FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)
-            if (!isStaticFile && !isExternal) {
+            const isLinkFromStaticFile = FILE_EXTENSIONS.test(window.location.href)
+            
+            if (!isLinkFromStaticFile && !isStaticFile && !isExternal) {
                 return
             }
 
-            // check if link targets SVG or other file
-            if (FILE_EXTENSIONS.test(href) || FILE_EXTENSIONS.test(anchor.pathname)) {
+            // check if link targets file or from file
+            if (
+                isLinkFromStaticFile
+                || FILE_EXTENSIONS.test(href)
+                || FILE_EXTENSIONS.test(anchor.pathname)
+            ) {
                 // stop default browser & Quartz logic
                 e.preventDefault()
                 e.stopPropagation()
