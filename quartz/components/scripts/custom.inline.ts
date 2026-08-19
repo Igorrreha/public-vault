@@ -1,5 +1,5 @@
 //@ts-nocheck
-const FILE_EXTENSIONS = /\.(svg|png|jpg|jpeg|gif|webp|pdf|zip|mp4|mp3)($|\?)/i
+const FILE_EXTENSIONS = /\.(canvas|svg|png|jpg|jpeg|gif|webp|pdf|zip|mp4|mp3)($|\?)/i
 
 let currentBackHandler: (() => void) | null = null
 
