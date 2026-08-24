@@ -21,13 +21,13 @@ tierlist:
     - X-Men
   High:
     - "Castlevania: Bloodlines"
-    - Altered Beast
     - Earthworm Jim
+    - Sonic the Hedgehog 2
+    - Altered Beast
     - Ecco the Dolphin
     - Golden Axe
     - Michael Jackson's Moonwalker
     - Road Rash
-    - Sonic the Hedgehog 2
     - Streets of Rage 1
   Mid:
     - "Contra: Hard Corps"
