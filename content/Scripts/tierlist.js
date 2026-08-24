@@ -1,5 +1,5 @@
 // ================= НАСТРОЙКИ =================
-let { items = [], categories = ["S", "A", "B", "C"], gradientColors = ["#7fff7f", "#ffdf7f", "#ff7f7f"] } = input;
+let { items = [], categories = ["S", "A", "B", "C"], gradientColors = ["#7fff7f", "#ffdf7f", "#ff7f7f"], utilityCategories = {} } = input;
 
 // Функция генерации градиента
 function generateGradient(colorStops, count) {
@@ -51,9 +51,17 @@ const UNASSIGNED_LABEL = "—";
 let categoryColors = {
     "—": "var(--background-modifier-border)",
 }
-const gradient = generateGradient(gradientColors, categories.length);
-categories.forEach((x, i) => {
-    categoryColors[x] = gradient[i];
+
+const gradient = generateGradient(gradientColors, categories.length - Object.keys(utilityCategories).length);
+let gradientColorIdx = 0;
+categories.forEach((x) => {
+    if (x in utilityCategories) {
+        categoryColors[x] = utilityCategories[x];
+        return;
+    }
+
+    categoryColors[x] = gradient[gradientColorIdx];
+    gradientColorIdx += 1;
 })
 
 // Загружаем сохраненное состояние из Frontmatter текущей заметки

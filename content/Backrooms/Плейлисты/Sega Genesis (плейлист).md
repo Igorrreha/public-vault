@@ -2,12 +2,12 @@
 tierlist:
   _colors:
     —: var(--background-modifier-border)
-    Done: "#7fff7f"
-    Current: "#b2f27f"
-    High: "#e5e57f"
-    Mid: "#ffcc7f"
-    Low: "#ffa57f"
-    Dropped: "#ff7f7f"
+    Done: "#fff"
+    Current: "#7fff7f"
+    High: "#d4ea7f"
+    Mid: "#ffbf7f"
+    Low: "#ff7f7f"
+    Dropped: "#fff"
   Done:
     - Sonic the Hedgehog
     - Mortal Kombat 3
@@ -130,5 +130,9 @@ dv.view("Scripts/tierlist", {
 		"X-Men",
 		"X-Men 2"],
 	categories: ["Done", "Current", "High", "Mid", "Low", "Dropped"],
+	utilityCategories: {
+		"Done": "#fff",
+		"Dropped": "#fff",
+	},
 });
 ```
