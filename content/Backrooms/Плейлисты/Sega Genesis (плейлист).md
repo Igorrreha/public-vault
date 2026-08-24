@@ -70,8 +70,8 @@ tierlist:
   Dropped: []
   —: []
 ---
-#плейлист 
 
+#плейлист 
 [[Плейлисты (легенда)]]
 ```dataviewjs
 dv.view("Scripts/tierlist", {
