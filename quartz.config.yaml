@@ -12,6 +12,7 @@ configuration:
     - private
     - templates
     - Excalidraw
+    - Scripts
     - .obsidian
   theme:
     fontOrigin: googleFonts
@@ -152,6 +153,12 @@ plugins:
     enabled: true
   - source: "github:Igorrreha/quartz-canvas-page-improved"
     enabled: true
+  - source: "github:Igorrreha/quartz-tierlist"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 15
+      display: all
   - source: "@quartz-community/content-page"
     enabled: true
   - source: "@quartz-community/folder-page"
