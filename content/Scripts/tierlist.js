@@ -1,5 +1,5 @@
 // ================= НАСТРОЙКИ =================
-let { items = [], categories = ["S", "A", "B", "C"], gradientColors = ["#ff7f7f", "#ffdf7f", "#7fff7f"] } = input;
+let { items = [], categories = ["S", "A", "B", "C"], gradientColors = ["#7fff7f", "#ffdf7f", "#ff7f7f"] } = input;
 
 // Функция генерации градиента
 function generateGradient(colorStops, count) {
@@ -71,6 +71,7 @@ try {
 
 const controls = dv.el("div", "", { cls: "dv-tiercontrols" });
 const resetButton = controls.createEl("button", { text: "Reset", cls: "dv-tierreset-btn" });
+const saveButton = controls.createEl("button", { text: "Save", cls: "dv-tierreset-btn" });
 
 const root = dv.el("div", "", { cls: "dv-tierlist-container" });
 const allGroups = [...categories, UNASSIGNED_LABEL];
@@ -180,7 +181,6 @@ items.forEach(itemText => {
         if (placeholder.parentNode) {
             placeholder.parentNode.removeChild(placeholder);
         }
-        saveCurrentLayout();
     });
 
     itemMap.set(itemText, item);
@@ -231,8 +231,6 @@ allGroups.forEach(cat => {
             dropzone.insertBefore(draggingItem, placeholder);
             dropzone.removeChild(placeholder);
         }
-        
-        saveCurrentLayout();
     });
 });
 
@@ -258,8 +256,6 @@ items.forEach(itemText => {
     }
 });
 
-saveCurrentLayout();
-
 resetButton.addEventListener("click", async () => {
     // 1. Очищаем данные в YAML текущего файла Obsidian
     const activeFile = app.workspace.getActiveFile();
@@ -277,5 +273,9 @@ resetButton.addEventListener("click", async () => {
     });
 
     // 3. Сохраняем обновленный (пустой) порядок во Frontmatter
+    saveCurrentLayout();
+});
+
+saveButton.addEventListener("click", async () => {
     saveCurrentLayout();
 });
