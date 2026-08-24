@@ -157,7 +157,7 @@ plugins:
     enabled: true
     layout:
       position: beforeBody
-      priority: 15
+      priority: 35
       display: all
   - source: "@quartz-community/content-page"
     enabled: true
